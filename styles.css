@@ -62,7 +62,6 @@ body {
 }
 
 
-
 h1, h3 {
     text-align: center;
     color: #2c3e50;
@@ -148,6 +147,7 @@ footer {
 
 .navbar nav ul li a:hover {
     color: #dce79a;
+    font-size: 150%;
 }
 
 @media screen and (max-width: 1440px) {
@@ -170,6 +170,7 @@ footer {
         height: 100px;
         position: fixed;
     }
+    
 
     .navbar nav ul {
         flex-direction: row;
@@ -184,6 +185,11 @@ footer {
         font-size: calc(5px + 1vw); /* Dynamically adjust font size */
         white-space: nowrap; /* Ensure text stays on one line */
     }
+
+    .navbar nav ul li a:hover {
+    color: #dce79a;
+    font-size: 110%;
+}
 }
 
 /* References Table */
