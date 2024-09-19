@@ -110,15 +110,15 @@ footer {
 /* Default styles (for screens larger than 750px) */
 .navbar {
     background-color: #4079a0;
-    padding: 10px 0;
-    width: 30%; 
+    padding: 10px 0px;
+    /* width: 30%;  */
     position: fixed;
     height: 100%; 
 }
 
 .navbar nav ul {
     list-style: none;
-    padding: 60px;
+    padding: 60px 0px;
     margin: 0;
     height: 100%; 
     display: flex;
@@ -128,7 +128,7 @@ footer {
 
 .navbar nav ul li {
     text-align: center;
-    margin: 10px 5px;
+    margin: 10px 0px;
 }
 
 .navbar nav ul li a {
@@ -143,6 +143,18 @@ footer {
     color: #dce79a;
 }
 
+@media screen and (max-width: 1440px) {
+    
+    .navbar {
+        width: calc(25% + 1vw)
+    }
+
+    .navbar nav ul li a {
+        font-size: calc(8px + 1vw); /* Dynamically adjust font size */
+        white-space: nowrap; /* Ensure text stays on one line */
+    }
+}
+
 /* Responsive Styles for Screens Smaller Than 750px */
 @media screen and (max-width: 750px) {
     .navbar {
@@ -153,6 +165,10 @@ footer {
 
     .navbar nav ul {
         flex-direction: row;
+    }
+
+    .navbar nav ul li {
+        margin: 10px 5px
     }
 
     .navbar nav ul li a {
