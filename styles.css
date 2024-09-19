@@ -128,7 +128,6 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center; 
-
 }
 
 .navbar nav ul li {
@@ -142,26 +141,21 @@ footer {
     display: block;
     padding: 30px;
     font-size: 20px;
-    border: 2px solid;
-    border-color: #dce79a;
-    border-radius: 150px;
 }
 
 .navbar nav ul li a:hover {
     color: #dce79a;
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1440px) {
     
     .navbar {
-        width: 30%;
+        width: calc(25% + 1vw)
     }
 
     .navbar nav ul li a {
         font-size: calc(8px + 1vw); /* Dynamically adjust font size */
         white-space: nowrap; /* Ensure text stays on one line */
-        border-right: 1px solid #dce79a;
-        
     }
 }
 
@@ -169,6 +163,7 @@ footer {
 @media screen and (max-width: 750px) {
     .navbar {
         width: calc(100% - 80px); 
+        
         height: 100px;
         position: fixed;
     }
@@ -182,14 +177,10 @@ footer {
     }
 
     .navbar nav ul li a {
-        padding: 4px calc(2px + 1vw); /* Reduce padding to fit smaller screens */
+        padding: 5px calc(2px + 1vw); /* Reduce padding to fit smaller screens */
         font-size: calc(5px + 1vw); /* Dynamically adjust font size */
         white-space: nowrap; /* Ensure text stays on one line */
-        padding-left: 5px;
-        padding-right: 5px;
-        border-radius: 30px;
     }
-
 }
 
 /* References Table */
@@ -273,7 +264,7 @@ footer {
 
 .agerestricted label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     font-weight: bold;
 }
 
