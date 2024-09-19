@@ -1,9 +1,21 @@
 /* General Styling */
-html, body {
+html {
+    background-color: white;
     height: 100%;
     margin: 0;
-    padding: 0;
+    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, sans-serif;
+
 }
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0 40px;
+    background-color: rgb(173, 209, 240);
+    height: 100%;
+}
+
+
 
 /* Header Styling */
 .main-header {
@@ -47,13 +59,6 @@ html, body {
 }
 
 
-body {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, sans-serif;
-    background-color: rgb(173, 209, 240);
-    
-}
 
 h1, h3 {
     text-align: center;
@@ -100,10 +105,10 @@ p {
 footer {
     color: white;
     background-color: #336282;
-    width: 100%;
     padding: 5px;
     position: relative; 
     font-size: 10px;
+    /* width: 100%; */
 }
 
 /* Navigation Bar */
@@ -111,7 +116,6 @@ footer {
 .navbar {
     background-color: #4079a0;
     padding: 10px 0px;
-    /* width: 30%;  */
     position: fixed;
     height: 100%; 
 }
@@ -124,6 +128,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center; 
+
 }
 
 .navbar nav ul li {
@@ -137,28 +142,33 @@ footer {
     display: block;
     padding: 30px;
     font-size: 20px;
+    border: 2px solid;
+    border-color: #dce79a;
+    border-radius: 150px;
 }
 
 .navbar nav ul li a:hover {
     color: #dce79a;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1600px) {
     
     .navbar {
-        width: calc(25% + 1vw)
+        width: 30%;
     }
 
     .navbar nav ul li a {
         font-size: calc(8px + 1vw); /* Dynamically adjust font size */
         white-space: nowrap; /* Ensure text stays on one line */
+        border-right: 1px solid #dce79a;
+        
     }
 }
 
 /* Responsive Styles for Screens Smaller Than 750px */
 @media screen and (max-width: 750px) {
     .navbar {
-        width: 100%; 
+        width: calc(100% - 80px); 
         height: 100px;
         position: fixed;
     }
@@ -172,10 +182,14 @@ footer {
     }
 
     .navbar nav ul li a {
-        padding: 5px; /* Reduce padding to fit smaller screens */
-        font-size: calc(7px + 1vw); /* Dynamically adjust font size */
+        padding: 4px calc(2px + 1vw); /* Reduce padding to fit smaller screens */
+        font-size: calc(5px + 1vw); /* Dynamically adjust font size */
         white-space: nowrap; /* Ensure text stays on one line */
+        padding-left: 5px;
+        padding-right: 5px;
+        border-radius: 30px;
     }
+
 }
 
 /* References Table */
