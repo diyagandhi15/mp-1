@@ -70,8 +70,16 @@ function power() {
     for(let i = 0; i < second; i=i+1) {
         result = first*result
     }
-
-    document.getElementById("output").innerHTML=String(result);
+    if (result < 0){
+        let output = document.getElementById("output")
+        output.style.color = "red"
+        output.innerHTML=String(result);
+    }
+    else {
+        let output = document.getElementById("output")
+        output.style.color = "black"
+        output.innerHTML=String(result);
+    }
 }
 
 function clearInput() {
