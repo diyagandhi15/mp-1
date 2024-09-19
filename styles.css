@@ -2,6 +2,7 @@
 html, body {
     height: 100%;
     margin: 0;
+    padding: 0;
 }
 
 /* Header Styling */
@@ -9,18 +10,41 @@ html, body {
     color: white;
     background-color: #336282;
     width: 100%;
-    padding: 5px; /* Adjust padding to fit design */
-    position: fixed; /* Make header fixed at the top */
-    top: 0; /* Ensure it's at the top */
+    padding: 5px;
     z-index: 1000; /* Ensure it stays on top */
     font-size: 15px;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
-
 
 .main-header h1 {
     color: #dce79a; /* Change this to the desired color */
+    margin: 0; 
+    text-align: left;
 }
 
+.main-header p {
+    margin: 0; 
+    text-align: left;
+}
+
+
+@media screen and (max-width: 750px) {
+    .main-header {
+        text-align: center; /* Align center for smaller screens */
+        padding: 10px; /* Add padding for spacing on smaller screens */
+    }
+
+    .main-header h1 {
+        color: #dce79a; /* Change this to the desired color */
+        margin: 0; 
+        text-align: center;
+    }
+    
+    .main-header p {
+        margin: 0; 
+        text-align: center;
+    }
+}
 
 
 body {
@@ -28,8 +52,7 @@ body {
     flex-direction: column;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, sans-serif;
     background-color: rgb(173, 209, 240);
-    margin: 0;
-    padding: 0;
+    
 }
 
 h1, h3 {
@@ -64,7 +87,6 @@ p {
     flex: 1; 
     padding: 20px;
     margin-left: 30%; 
-    margin-top: 100px; /* Ensure content doesn't overlap header */
 }
 
 @media screen and (max-width: 750px) {
@@ -92,7 +114,6 @@ footer {
     width: 30%; 
     position: fixed;
     height: 100%; 
-    top: 35px;
 }
 
 .navbar nav ul {
@@ -107,14 +128,14 @@ footer {
 
 .navbar nav ul li {
     text-align: center;
-    margin: 10px 10;
+    margin: 10px 5px;
 }
 
 .navbar nav ul li a {
     color: white;
     text-decoration: none;
     display: block;
-    padding: 30px 30px;
+    padding: 30px;
     font-size: 20px;
 }
 
@@ -128,21 +149,15 @@ footer {
         width: 100%; 
         height: 100px;
         position: fixed;
-        top: 50px;
     }
 
     .navbar nav ul {
         flex-direction: row;
     }
 
-    .navbar nav ul li {
-        min-width: 0; /* Prevent items from overflowing */ 
-    }
-
     .navbar nav ul li a {
         padding: 5px; /* Reduce padding to fit smaller screens */
-        font-size: 12px; /* Dynamically adjust font size */
-        text-align: center; /* Ensure text stays centered */
+        font-size: calc(7px + 1vw); /* Dynamically adjust font size */
         white-space: nowrap; /* Ensure text stays on one line */
     }
 }
