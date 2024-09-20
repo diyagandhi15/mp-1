@@ -100,8 +100,10 @@ p {
     .main-content {
         margin-left: 0; 
         padding-top: 100px; 
+        margin-top: 30px;
     }
 }
+
 
 /* Footer */
 footer {
@@ -147,7 +149,6 @@ footer {
 
 .navbar nav ul li a:hover {
     color: #dce79a;
-    font-size: 150%;
 }
 
 @media screen and (max-width: 1440px) {
@@ -186,9 +187,25 @@ footer {
     }
 
     .navbar nav ul li a:hover {
-    color: #dce79a;
-    font-size: 110%;
+    color: #dce79a;}
 }
+
+
+/* Add horizontal scrolling for small screens */
+.table-container {
+    overflow-x: auto;
+}
+
+
+/* For smaller screens, allow the table to scroll */
+@media screen and (max-width: 750px) {
+    .styled-table {
+        width: 50%; /* Full width table */
+    }
+
+    .styled-table th, .styled-table td {
+        font-size: 14px; /* Adjust font size for small screens */
+    }
 }
 
 /* References Table */
